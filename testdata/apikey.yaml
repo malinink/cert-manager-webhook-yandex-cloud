@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: yandex-cloud-authorized-key
+type: Opaque
+stringData:
+  serviceAccountId: __SERVICE-ACCOUNT-ID__
+  id: __AUTHORIZED-KEY-ID__
+  encryption: RSA_2048
+  publicKey: |-
+    -----BEGIN PUBLIC KEY-----
+    __KEY-DATA__
+    -----END PUBLIC KEY-----
+  privateKey: |-
+    -----BEGIN PRIVATE KEY-----
+    __KEY-DATA__
+    -----END PRIVATE KEY-----

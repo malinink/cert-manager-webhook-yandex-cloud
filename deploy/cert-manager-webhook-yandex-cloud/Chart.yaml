@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+name: cert-manager-webhook-yandex-cloud
+appVersion: "0.0.1"
+description: Yandex Cloud DNS cert-manager ACME webhook
+maintainers:
+  - name: malinink
+    email: mail@malinink.ru
+    url: https://github.com/malinink
+version: 0.0.1

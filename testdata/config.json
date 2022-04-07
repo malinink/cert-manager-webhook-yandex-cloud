@@ -1,0 +1,4 @@
+{
+  "dnsZoneId": "__DNS_ZONE_ID__",
+  "authorizationKeySecretName": "yandex-cloud-authorized-key"
+}
