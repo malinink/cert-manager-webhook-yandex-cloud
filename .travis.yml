@@ -5,4 +5,4 @@ go:
 script:
   - echo $APIKEY_YAML_B64 | base64 --decode > testdata/apikey.yaml
   - echo $CONFIG_JSON_B64 | base64 --decode > testdata/config.json
-  - RESOLVED_ZONE_NAME=$(echo $RESOLVED_ZONE_NAME) make test
+  - RESOLVED_ZONE_NAME=malinaz.ru. make test

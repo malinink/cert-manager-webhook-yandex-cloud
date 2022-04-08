@@ -85,7 +85,7 @@ spec:
 
 You can run the test suite with:
 
-1. Fill in the appropriate values in `testdata/apikey.yml` and `testdata/config.json`
+1. Fill in the appropriate values in `testdata/apikey.yaml` and `testdata/config.json` by `apikey.test.yaml` and `config.test.json` examples
 
 ```bash
 $ RESOLVED_ZONE_NAME=example.com. make test
