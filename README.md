@@ -47,7 +47,7 @@ metadata:
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: mail@malinink.ru
+    email: support.person@orgdomain.com
     privateKeySecretRef:
       name: letsencrypt-dns-prod
     solvers:
@@ -67,16 +67,16 @@ And then you can issue a cert:
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: whildcard-malinink
+  name: whildcard-example
 spec:
-  secretName: whildcard-malinink-tls
-  commonName: malinink.ru
+  secretName: whildcard-example-tls
+  commonName: example.com
   issuerRef:
     name: letsencrypt-dns-prod
     kind: ClusterIssuer
   dnsNames:
-    - malinink.ru
-    - "*.malinink.ru"
+    - example.com
+    - "*.example.com"
 ```
 
 ## Development
