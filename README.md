@@ -1,5 +1,5 @@
 # cert-manager-webhook-yandex-cloud
-[![Build Status](https://travis-ci.org/malinink/cert-manager-webhook-yandex-cloud.svg?branch=master)](https://travis-ci.org/malinink/cert-manager-webhook-yandex-cloud)
+![test](https://github.com/malinink/cert-manager-webhook-yandex-cloud/actions/workflows/test.yml/badge.svg)
 
 Cert-manager ACME DNS webhook provider for Yandex Cloud.
 
