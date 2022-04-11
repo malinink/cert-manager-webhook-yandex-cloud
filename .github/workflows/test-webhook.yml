@@ -1,0 +1,31 @@
+name: Test Webhook
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: 1.17
+
+      - name: Unpack apikey
+        env:
+          APIKEY_YAML_B64: ${{ secrets.APIKEY_YAML_B64 }}
+        run: |
+          echo $APIKEY_YAML_B64 | base64 --decode > testdata/apikey.yaml
+
+      - name: Unpack apikey
+        env:
+          CONFIG_JSON_B64: ${{ secrets.CONFIG_JSON_B64 }}
+        run: |
+          echo $CONFIG_JSON_B64 | base64 --decode > testdata/config.json
+
+      - name: Test
+        env:
+          RESOLVED_ZONE_NAME: ${{ secrets.RESOLVED_ZONE_NAME }}
+        run: |
+          RESOLVED_ZONE_NAME=$(echo $RESOLVED_ZONE_NAME) make test

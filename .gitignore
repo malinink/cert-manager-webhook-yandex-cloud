@@ -16,6 +16,10 @@
 # Ignore the built binary
 cert-manager-webhook-example
 
+# Ignore test configs
+testdata/apikey.yaml
+testdata/config.json
+
 # Make artifacts
 _out
 _test
